@@ -145,6 +145,10 @@ After connecting, copy the download setup file to the Lab VM in `/home/ansible`
 
 
 
+Connect to the server using SSH
+
+
+
 Extract the installer 
 
 ```bash
