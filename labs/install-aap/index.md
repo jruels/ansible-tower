@@ -4,9 +4,7 @@
 
 ### Prerequisites
 
-Sign up for a Red Hat Developer account
-
-
+#### Red Hat Developer account
 
 Go to the [Red Hat Developer portal](https://developers.redhat.com/about), click "Join now," and fill out the form. 
 
@@ -17,13 +15,7 @@ Provide the following:
 * Job role 
 * Password 
 
-<img src="/Users/jruels/Library/Application Support/typora-user-images/image-20220221140646119.png" alt="image-20220221140646119" style="zoom:45%;" />
-
-
-
-A Red Hat registry service account token
-
-
+#### Red Hat registry service account token
 
 Navigate to the [Registry Service Account Management Application](https://access.redhat.com/terms-based-registry/), and log in if necessary.
 
@@ -39,7 +31,7 @@ Navigate to the [Registry Service Account Management Application](https://access
 4. Click the Service Account you created.
 
    - Note the username, including the prepended string (i.e. `XXXXXXX|username`). This is the username that should be used to log in to registry.redhat.io.
-   - Note the password. This is the password that should be used to authenticate to [registry.redhat.io.](https://registry.redhat.io)
+   - Note the password. This is the password that should be used to authenticate to [registry.redhat.io.](https://registry.redhat.io) in the `inventory` file.
 
    
 
@@ -47,7 +39,7 @@ Navigate to the [Registry Service Account Management Application](https://access
 
 ### Connect to Lab environment
 
-At the top of the lab page, right click "View on GitHub" and open in a new tab. 
+At the top of the lab page, right-click "View on GitHub" and open in a new tab. 
 
 In the new GitHub tab, click the green "Code" button, and in the drop-down, click "Download zip"
 
