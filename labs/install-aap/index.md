@@ -115,7 +115,7 @@ Click [Here](https://access.redhat.com/downloads/content/480) to download the An
 
 * Click the "Download Now" link
 
-  ![image-20220221230429201](/Users/jruels/Library/Application Support/typora-user-images/image-20220221230429201.png)
+  ![image-20220221230429201](images/image-20220221230429201.png)
 
 Copy the installer to the lab VM using WinSCP:
 
@@ -227,17 +227,17 @@ Log into the dashboard with the username `admin` and the password you specified 
 
 You will see a screen asking to register Automation Platform. Log in with your developer credentials.
 
-<img src="/Users/jruels/Library/Application Support/typora-user-images/image-20220222022946979.png" alt="image-20220222022946979" style="zoom: 33%;" />
+<img src="images/image-20220222022946979.png" alt="image-20220222022946979" style="zoom: 33%;" />
 
 
 
 Select your subscription, and click "Next"
 
-<img src="/Users/jruels/Library/Application Support/typora-user-images/image-20220222024205420.png" alt="image-20220222024205420" style="zoom:50%;" />
+<img src="images/image-20220222024205420.png" alt="image-20220222024205420" style="zoom:50%;" />
 
 Accept defaults, and click "Next"
 
-<img src="/Users/jruels/Library/Application Support/typora-user-images/image-20220222024307322.png" alt="image-20220222024307322" style="zoom:45%;" />
+<img src="images/image-20220222024307322.png" alt="image-20220222024307322" style="zoom:45%;" />
 
 Accept the license agreement and click "Submit"
 
@@ -245,7 +245,6 @@ Accept the license agreement and click "Submit"
 
 You should now see the dashboard 
 
-![image-20220222024405897](/Users/jruels/Library/Application Support/typora-user-images/image-20220222024405897.png)
+![image-20220222024405897](images/image-20220222024405897.png)
 
-> 
->
+### Congratulations
