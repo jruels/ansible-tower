@@ -170,7 +170,7 @@ Now configure the credentials to access the managed host from Ansible Automation
 In the **Resources** menu choose **Credentials**, and click **Add** then fill in the following:
 
 * **Name**: Server1 credentials
-* **Description**: Credentials to authentication to server1
+* **Description**: Credentials to authenticate to server1
 * **Organization**: Default
 * **Credential Type**: Machine
 
