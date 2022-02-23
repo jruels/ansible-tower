@@ -45,7 +45,6 @@ Click the **Add** button and give it a **Name**, and **Description**:
 
   ```yaml
   ansible_connection: local
-  ansible_python_interpreter: '{{ ansible_playbook_python }}'
   ansible_host: localhost
   ```
 
