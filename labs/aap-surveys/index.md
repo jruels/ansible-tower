@@ -170,7 +170,8 @@ You have already been through all the steps needed, so try this for yourself.
 ### Solution
 
 <details>
-  <summary>Solution</summary>
+  <summary>Click Here to expand</summary>
+
 
 
   Go to Resources → Inventories → Centos
