@@ -106,7 +106,7 @@ Within **Resources** -> **Templates**, click the **Add** button and choose **Add
 | --------------------- | ---------------------------------- |
 | Name                  | Node.js Deploy                     |
 | Job Type              | Run                                |
-| Inventory             | Workshop Inventory                 |
+| Inventory             | Centos                             |
 | Project               | Webdev Git Repo                    |
 | Execution Environment | AWX execution environment          |
 | Playbook              | `rhel/webdev/install_node_app.yml` |
