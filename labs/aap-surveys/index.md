@@ -174,11 +174,19 @@ You have already been through all the steps needed, so try this for yourself.
 
 Go to Resources → Inventories → Centos
 
+
+
 In the Hosts view select centos and click Run Command
+
+
 
 Within the Details window, select Module command, in Arguments type systemctl status httpd and click Next.
 
+
+
 Within the Execution Environment window, select AWX execution environment and click Next.
+
+
 
 Within the Machine Credential window, select centos credentials and click Launch.
 
