@@ -3,7 +3,7 @@
 This site includes the labs for the Ansible Automation Platform class.   
 
 ## Lab VM IPs
-[](Lab_VMs.pdf)
+[Click Here for Lab IPs](Lab_VMs.pdf)
 
 
 ## Course Content   
