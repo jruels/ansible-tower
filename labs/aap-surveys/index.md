@@ -170,11 +170,9 @@ You have already been through all the steps needed, so try this for yourself.
 ### Solution
 
 <details>
-  <summary>Click Here to expand</summary>
+  <summary>Click here to expand</summary>
 
-
-
-  Go to Resources → Inventories → Centos
+Go to Resources → Inventories → Centos
 
 * In the Hosts view select centos and click **Run Command**
 
