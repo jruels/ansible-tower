@@ -15,6 +15,6 @@ Lab 2: [Inventories, credentials, and ad-hoc commands](labs/aap-inventory-creds-
 Lab 3: [Project and Job Templates](labs/aap-projects-templates-jobs/)   
 
 ### Day 3     
-Lab 4: [Setting up a Survey](labs/aap-survey/)   
+Lab 4: [Setting up a Survey](labs/aap-surveys/)   
 Lab 5: [Role-Based Access Controls](labs/aap-rbac/)   
 Lab 6: [Workflows](labs/aap-workflows/)   
