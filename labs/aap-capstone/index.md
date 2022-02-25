@@ -26,7 +26,7 @@ We need to configure credentials, inventory, etc for our new `centos2` host.
 
 Because `centos` and `centos` are part of the same inventory we need to use the same credentials for both. 
 
-Log into `centos` and `cat ~/.ssh/tower.pub` and then add it to `centos2` `~/.ssh/authorized_keys`
+Log into `centos` and `cat ~/.ssh/centos.pub` and then add it to `centos2` `~/.ssh/authorized_keys`
 
 After configuring the new host confirm the `ping` module works when executed against it. 
 
