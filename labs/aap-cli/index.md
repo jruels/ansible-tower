@@ -98,7 +98,7 @@ awx inventory create
 
 To practice your **awx** skills, here is a challenge:
 
-- Try to change the **idle time out** of the Tower web UI, it’s 1800 seconds by default. Set it to, say, 7200. Using **awx**, of course.
+- Try to change the **idle time out** of the Tower web UI, it’s `1800` seconds by default. Set it to, say, `7200`. Using **awx**, of course.
 - Start by looking for a resource type **awx** provides using **–help** that sounds like it has something to do with changing settings.
 - Look at the available **awx** commands for this resource type.
 - Use the commands to have a look at the parameters settings and change it.
