@@ -25,5 +25,5 @@ Lab 6: [Workflows](labs/aap-workflows/)
 
 ### Day 4      
 Lab 7: [AWX Cli](labs/aap-cli/)   
-Lab 8: [AAP API](labs/aap-/api)   
+Lab 8: [AAP API](labs/aap-api)   
 Lab 9: [Capstone](labs/aap-capstone/)   
