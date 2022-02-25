@@ -196,14 +196,6 @@ In the same fashion add a second **Survey Question**
   - **Select Items from List** -> select the checkbox `wweb`, click **Next**.
   - **Select Roles to Apply** -> select the checkbox **Execute** and click **Save**.
 
--  
-
-  the ability to execute the template.
-
-  - **Select a Resource Type** -> click **Users**, click **Next**.
-  - **Select Items from List** -> select the checkbox `wweb`, click **Next**.
-  - **Select Roles to Apply** -> select the checkbox **Execute** and click **Save**.
-
 - Run the survey as user `wweb`
 
   - Logout of the user `admin` of your Ansible automation controller.
