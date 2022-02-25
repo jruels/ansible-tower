@@ -21,3 +21,8 @@ Lab 3: [Project and Job Templates](labs/aap-projects-templates-jobs/)
 Lab 4: [Setting up a Survey](labs/aap-surveys/)   
 Lab 5: [Role-Based Access Controls](labs/aap-rbac/)   
 Lab 6: [Workflows](labs/aap-workflows/)   
+
+
+### Day 4      
+Lab 2: [AWX Cli](labs/aap-cli/)   
+Lab 3: [Capstone](labs/aap-capstone/)   
