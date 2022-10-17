@@ -7,7 +7,7 @@ This site includes the labs for the Ansible Automation Platform class.
 
 
 ## Course Content   
-Slides were emailed to each student. 
+Slides will be provided by the instructor.
 
 ## Labs   
 ### Day 1      
