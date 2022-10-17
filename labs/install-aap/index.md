@@ -165,7 +165,7 @@ ping aap.localhost.com
 
 
 
-Copy and paste this sample inventory.
+Replace the text in the `inventory` file with below:
 
 ```
 [automationcontroller]
@@ -212,7 +212,9 @@ sudo ./setup.sh -e required_ram=2048
 
 After the script above completes, you can access the Dashboard at the following URL (replacing `Server IP` with your lab VM IP)  
 
+```
 https://[Server IP]/#/login
+```
 
 
 
