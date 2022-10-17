@@ -136,7 +136,7 @@ tar -zxvf ansible-automation-platform-setup-*.tar.gz
 Enter directory 
 
 ```bash
-cd ansible-automation-platform-setup-2.2.1-1
+cd ansible-automation-platform-setup-bundle-2.2.1-1
 ```
 
 
