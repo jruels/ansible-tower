@@ -11,4 +11,5 @@ Slides will be provided by the instructor.
 
 ## Labs   
 ### Day 1      
+Lab Setup: [Lab Setup](labs/lab-setup)   
 Lab 1: [Deploy Ansible Automation Platform](labs/install-aap/)   
