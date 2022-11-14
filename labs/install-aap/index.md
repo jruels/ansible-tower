@@ -63,59 +63,6 @@ sudo subscription-manager register --auto-attach
 
 When prompted, provide your Red Hat Developer username and password.
 
-Click [Here](https://access.redhat.com/downloads/content/480) to download the Ansible Automation Platform installer. 
-
-* Log in to the portal 
-
-* At the top change the Version to `2.2 for RHEL 8`
-
-  ![image-20220913012736465](images/image-20220913012736465.png)
-
-* Click the "Download Now" link on the "Bundle" installer
-
-  ![image-20220913022904472](images/image-20220913022904472.png)
-  
-  
-
-Copy the installer to the lab VM. 
-
-## Macos/Linux
-Use `scp` to copy the setup file from your local machine to the Ansible Control node.
-
-
-
-## Windows
-
-Copy the installer to the lab VM using WinSCP:
-
-
-Create a new connection to the lab server:
-
-- Change File protocol to SCP
-- Enter the Hostname of the Lab VM
-- Enter the username provided by the instructor
-
-![img](https://winscp-static-746341.c.cdn77.org/data/media/screenshots/login.png?v=6990)
-
-
-
-Configure SSH Key Authentication:
-
-* Browse the key provided by the instructor.
-
-![img](https://winscp-static-746341.c.cdn77.org/data/media/screenshots/login_authentication.png?v=6990)
-
-
-
-After connecting, copy the download setup file to the Lab VM in `/home/ec2-user`
-
-<img src="https://winscp-static-746341.c.cdn77.org/data/media/screenshots/commander.png?v=6990" alt="img" style="zoom:85%;" />
-
-
-
-Connect to the server using SSH
-
-
 
 Extract the installer 
 
