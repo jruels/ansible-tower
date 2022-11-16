@@ -4,62 +4,11 @@ Demonstrate the use of Ansible Automation controller [survey feature](https://do
 
 
 
-## Install a new Execution Environment
-
-To run the playbook in this lab, a new execution environment is required. 
-
-Go to the **Administration -> Execution Environments**, click the **Add** button and fill in the form:
-
-* **Name**: AWX
-* **Image**: quay.io/ansible/awx-ee:latest
-* **Pull**: Only pull the image if not present before running
-* **Organization**: Default
-* **Registry credential**: Click the magnifying class and select **Default Execution Environment Registry Credential**
-* Click **Select**
-* Click **Save**
-
-
-
 ## Install Apache
-
-### Add inventory
-
-This lab requires adding an additional inventory, host, and credential. 
-
-Create a new inventory with the following attributes: 
-
-* **Name**:  CentOS
-* **Organization**: Default
-
-Click **Save**
-
-
-
-### Add host to inventory
-
-Add the host to the inventory in Automation Platform:
-
-Click the **Add** button and give it a **Name**, and **Description**: 
-
-* **Name**: centos
-
-* Under **Variables** confirm **YAML** is highlighted and then paste the following:
-
-  ```yaml
-  ansible_host: <replace with IP of your CentOS host>
-  ```
-
-  
-
-* Click **Save** 
-
-You have now created an inventory with a new managed host.
-
-
 
 For this lab, we will use a playbook stored in this Git repository
 
-https://github.com/jruels/workshop-examples
+[https://github.com/jruels/workshop-examples](https://github.com/jruels/workshop-examples)
 
 A playbook to ensure Apache is installed and started. The playbook is `apache_install.yml`
 
@@ -82,41 +31,9 @@ A playbook to ensure Apache is installed and started. The playbook is `apache_in
 ```
 
 
-
 To confirm the **Ansible Workshop Examples** project has the latest revision of our GitHub repository click **sync**
 
 After starting the sync job, go to the **Jobs** view: there is a new job for the update of the Git repository.
-
-## Create Machine credentials for new host
-
-To access the new server we need to create an **SSH key** using `ssh-keygen`
-
-Log in to the `centos` server through SSH and run the commands from the [previous lab](https://jruels.github.io/ansible-tower/labs/aap-inventory-creds-ad-hoc/)  → **Machine Credentials** section to generate an SSH key, and add it to the  `authorized_keys` file. 
-
-Copy the **complete private key** (including “BEGIN” and “END” lines) , and save it for the next step.
-
-
-
-Now configure the credentials to access the `centos` host from Ansible Automation Platform.
-
-In the **Resources** menu choose **Credentials**, and click **Add** then fill in the following:
-
-* **Name**: centos credentials
-* **Organization**: Default
-* **Credential Type**: Machine
-
-Under **Type Details** fill in: 
-
-* **Username**: ansible
-
-* **SSH Private Key**: Paste the private key from above.  
-
-**Privilege Escalation Method**: sudo 
-
-* Click **Save**
-
-  You have now set up credentials for Ansible to access your managed host.
-
 
 
 ## Create a new Job Template
@@ -131,15 +48,15 @@ Fill in the following:
 
 * **Job Type**: Run
 
-* **Inventory**: Centos
+* **Inventory**: First Inventory
 
 * **Project**: Ansible Workshop Examples
 
-* **Execution Environment**: AWX
+* **Execution Environment**: Default
 
-* **Playbook**: apache_install.yml
+* **Playbook**: `/rhel/apache/apache_install.yml`
 
-* **Credentials**: centos credentials
+* **Credentials**: Linux Server credentials
 
 * **Options**: The tasks need to run as `root` so check **Privilege Escalation**
 
@@ -172,23 +89,23 @@ You have already been through all the steps needed, so try this for yourself.
 <details>
   <summary>Click here to expand</summary>
 
-Go to Resources → Inventories → Centos
+Go to Resources → Inventories → First Inventory
 
 
 
-In the Hosts view select centos and click Run Command
+In the Hosts view select both nodes and click Run Command
 
 
 
-Within the Details window, select Module command, in Arguments type systemctl status httpd and click Next.
+Within the Details window, select the command module, in Arguments type systemctl status httpd and click Next.
 
 
 
-Within the Execution Environment window, select AWX execution environment and click Next.
+Within the Execution Environment window, select Default execution environment and click Next.
 
 
 
-Within the Machine Credential window, select centos credentials and click Launch.
+Within the Machine Credential window, select Linux Server credentials and click Launch.
 
 </details>
 
@@ -196,7 +113,7 @@ Within the Machine Credential window, select centos credentials and click Launch
 
 ## Extend template with a Survey
 
-You have installed Apache on the `centos` host in the job you just ran. Now we’re going to extend this:
+You have installed Apache on your nodes in the job you just ran. Now we’re going to extend this:
 
 - Use a proper role that has a Jinja2 template to deploy an `index.html` file.
 - Create a job **Template** with a survey to collect the values for the `index.html` template.
@@ -254,11 +171,11 @@ Fill out the following information:
 
 * **Name**: Create index.html
 * **Job Type**: Run
-* **Inventory**: Centos
+* **Inventory**: First Inventory
 * **Project**: Ansible Workshop Examples
-* **Execution Environment**: AWX
+* **Execution Environment**: Default
 * **Playbook**: rhel/apache/apache_role_install.yml
-* **Credentials**:  centos credentials
+* **Credentials**:  Linux Server credentials
 * **Limit**: web
 * **Options**: Privilege Escalation
 
@@ -310,13 +227,10 @@ Now launch **Create index.html** job template by selecting the **Details** tab a
 
 Before the actual launch, the survey will ask for **First Line** and **Second Line**. Fill in some text and click **Next**. The **Preview** window shows the values
 
-<img src="../../../../../../Library/Application Support/typora-user-images/image-20220223224133973.png" alt="image-20220223224133973" style="zoom:40%;" />
-
-
 
  If all is good run the Job by clicking **Launch**.
 
-After the job has completed, check the Apache homepage. SSH into the `centos` node, execute `curl` against `localhost`:
+After the job has completed, check the Apache homepage. SSH into your nodes, execute `curl` against `localhost`:
 
 ```bash
 $ curl http://localhost
@@ -327,7 +241,7 @@ $ curl http://localhost
 </body>
 ```
 
-Note how the two variables where used by the playbook to create the content of the `index.html` file.
+Note how the two variables were used by the playbook to create the content of the `index.html` file.
 
 
 

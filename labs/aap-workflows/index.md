@@ -58,7 +58,7 @@ Within **Resources** -> **Projects**, click the **Add** button to create a proje
 | -------------------------------- | ------------------------------------------------- |
 | Name                             | Webops Git Repo                                   |
 | Organization                     | Default                                           |
-| Execution Environment            | AWX execution environment                         |
+| Execution Environment            | Default execution environment                         |
 | Source Control Credential Type   | Git                                               |
 | Source Control URL               | `https://github.com/jruels/workshop-examples.git` |
 | Source Control Branch/Tag/Commit | `webops`                                          |
@@ -74,7 +74,7 @@ Within **Resources** -> **Projects**, click the **Add** button to create a proje
 | -------------------------------- | ------------------------------------------------- |
 | Name                             | Webdev Git Repo                                   |
 | Organization                     | Default                                           |
-| Default Execution Environment    | AWX execution environment                         |
+| Default Execution Environment    | Default execution environment                         |
 | Source Control Credential Type   | Git                                               |
 | Source Control URL               | `https://github.com/jruels/workshop-examples.git` |
 | Source Control Branch/Tag/Commit | `webdev`                                          |
@@ -92,11 +92,11 @@ Within **Resources** -> **Templates**, click the **Add** button and choose **Add
 | --------------------- | ------------------------------------ |
 | Name                  | Web App Deploy                       |
 | Job Type              | Run                                  |
-| Inventory             | centos                               |
+| Inventory             | First inventory                      |
 | Project               | Webops Git Repo                      |
-| Execution Environment | AWX execution environment            |
+| Execution Environment | Default execution environment        |
 | Playbook              | `rhel/webops/web_infrastructure.yml` |
-| Credentials           | centos credentials                   |
+| Credentials           | Linux Server credentials             |
 | Limit                 | web                                  |
 | Options               | ✓ Privilege Escalation               |
 
@@ -110,11 +110,11 @@ Within **Resources** -> **Templates**, click the **Add** button and choose **Add
 | --------------------- | ---------------------------------- |
 | Name                  | Node.js Deploy                     |
 | Job Type              | Run                                |
-| Inventory             | Centos                             |
+| Inventory             | First inventory                    |
 | Project               | Webdev Git Repo                    |
-| Execution Environment | AWX execution environment          |
+| Execution Environment | Default execution environment      |
 | Playbook              | `rhel/webdev/install_node_app.yml` |
-| Credentials           | centos credentials                 |
+| Credentials           | Linux Server credentials           |
 | Limit                 | web                                |
 | Options               | ✓ Privilege Escalation             |
 
@@ -181,21 +181,8 @@ NOTE: Where `XX` is the number of the job run.
 
 ![jobs view of workflow](https://aap2.demoredhat.com/exercises/ansible_rhel/2.6-workflows/images/job_workflow.png)
 
+## Challenge Lab: Recovery workflow
+Using what you learned in this lab, create a workflow with three jobs (JobA, JobB, JobC). If JobA is successful, JobB runs; if JobA fails, JobC runs.
 
 
-**NOTE**: You should see an error in the job output for `Web App Deploy`. Work on solving the issue by yourself, and if you can not resolve it ask the instructor for the solution. 
-
-
-
-After resolving the above issue, run the workflow again. 
-
-Check if everything worked fine: from your control host run the following curl command against `centos`. 
-
-
-
-The output should be `Hello World`.
-
-```bash
-[ansible@ansible-1]$ curl http://<your centos server's IP>/nodejs
-Hello World
-```
+## Congrats!
