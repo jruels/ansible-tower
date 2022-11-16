@@ -132,7 +132,7 @@ Fill in the following:
 
 * **Playbook**: create_user.yml
 
-* **Credentials**: Server1 credentials
+* **Credentials**: Linux credentials
 
 * **Options**: The tasks need to run as `root` so check **Privilege Escalation**
 
@@ -140,7 +140,7 @@ Fill in the following:
 
 
 
-This playbook targets hosts in the `web` group. We need to add our `Server1` host to the `web` group. 
+This playbook targets hosts in the `web` group. We need to add our managed nodes to the `web` group. 
 
 Go to **Resources → Inventories**, and click **First Inventory**. 
 
@@ -152,13 +152,13 @@ At the top of the screen click **Groups** and then **Add**. Fill in the followin
 
 * Click **Save**
 
-At the top of the page click **Hosts**, **Add**, **Add existing host,** and select **Server1**
+At the top of the page click **Hosts**, **Add**, **Add existing host,** and select **Server1**, and **Server2**.
 
 
 
 
-
-You can start the job by directly clicking the blue **Launch** button, or by clicking on the rocket in the Job Templates overview. After launching the Job Template, you are automatically brought to the job overview where you can follow the playbook execution in real-time:
+## Launch the job
+Go back to **Resources -> Templates** and start the job by directly by clicking on the rocket on the Job Templates overview page. After launching the Job Template, you are automatically brought to the job overview where you can follow the playbook execution in real-time:
 
 
 
