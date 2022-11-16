@@ -10,7 +10,7 @@ You should definitely keep your playbooks under version control. In this lab weâ
 
 For this lab we will use a playbook stored in this Git repository
 
-https://github.com/jruels/workshop-examples
+[Playbook Examples](https://github.com/jruels/workshop-examples)
 
 A playbook to manage users, and groups. The playbook is `create_user.yml`
 
