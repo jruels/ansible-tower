@@ -96,27 +96,24 @@ ssh <IP of each node from the spreadsheet>
 
 ## Create a Simple Ansible Inventory
 
-Create and enter a working directory
+On the Control Node create a working directory
 
 ```
-mkdir /home/ansible/lab-setup && cd /home/ansible/lab-setup
+mkdir /home/ansible/lab-setup 
 ```
 
-Next, we'll create a simple Ansible inventory on the control node in `/home/ansible/lab-setup/inventory` containing `node1` and `node2`.
-
-On the control host:
 
 Enter the working directory
 ```
 cd /home/ansible/lab-setup
 ```
+
+Next, we'll create a simple Ansible inventory containing `node1` and `node2`.
 ```
 touch inventory 
 echo "node1 ansible_host=<IP of node1 from spreadsheet>" >> inventory 
 echo "node2 ansible_host=<IP of node2 from spreadsheet>" >> inventory 
 ```
-
-
 
 ## Configure `sudo` Access for Ansible
 
@@ -251,7 +248,7 @@ Under **Type Details** fill in:
 
 * Click **Save**
 
-Go back to the **Resources -> Credentials -> Server1 credentials** and note that the SSH key is not visible.
+Go back to the **Resources -> Credentials -> Linux credentials** and note that the SSH key is not visible.
 
 You have now set up credentials for Ansible to access your managed host.
 
